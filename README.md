@@ -10,11 +10,17 @@ Program ini dikembangkan untuk memenuhi tugas proyek akhir mata kuliah Struktur 
 - **Relasi Data:** Graph (Adjacency List) untuk pemetaan rute/relasi.
 
 ## Anggota Kelompok
+Dosen Pengampu: Kurnia Prima Putra, S.Kom., M.T
 1. Andi Muh. Yusran Haris - 250210501003 (Ketua)
 2. Nabil Imron - 250210501047
 3. Muh. Ilham Putra Syahrir - 250210501053
 4. Rifyah Al-Azizah - 250210500033
 5. Vera Delimah - 250210501049
+
+Prodi Teknik Komputer
+Jurusan Teknik Informatika dan Komputer
+Fakultas Teknik
+Universitas Negeri Makassar
 
 ## Cara Menjalankan
 1. Clone repositori ini.
