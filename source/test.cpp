@@ -9,7 +9,7 @@ int main(){
     cout<<"1"<<endl;
     }
 
-    cout << "Coba-Coba ji" << endl;
+    cout << "Nurul Fajrih" << endl;
     cout << "Kenapa bukan namaku muncul" << endl;
     return 0;
 }; 
