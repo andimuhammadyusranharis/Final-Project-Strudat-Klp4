@@ -4,12 +4,6 @@ using namespace std;
 
 
 int main(){
-    
-    for (int i = 0; i < 10; i++){
-    cout<<"1"<<endl;
-    }
-
-    cout << "Nurul Fajrih" << endl;
-    cout << "Kenapa bukan namaku muncul" << endl;
+    cout << "Hello Word" << endl;
     return 0;
 }; 
