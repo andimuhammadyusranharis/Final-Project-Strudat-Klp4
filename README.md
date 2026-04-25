@@ -28,5 +28,5 @@ Universitas Negeri Makassar
 
 ## Cara Menjalankan
 1. Clone repositori ini.
-2. Compile file `main.cpp` menggunakan compiler GCC/G++.
+2. Compile file `main.cpp, bst_logic, graph_route, linked_list, sort_search` menggunakan compiler GCC/G++.
 3. Jalankan executable yang dihasilkan.
