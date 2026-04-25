@@ -17,6 +17,17 @@ Graph* createGraph(int V) {
 
 void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
     // KODE AKAN DIKERJAKAN OLEH RIFYAH
+    if (graph->indeksKota.find(asal) == graph->indeksKota.end()){
+        int index = graph->indeksKota.size();
+        graph->indeksKota[asal]=index;
+    }
+
+    if(graph->indeksKota.find(tujuan)==graph->indeksKota.end()){
+        int index = graph->indeksKota.size();
+        graph->indeksKota[tujuan] = index;
+
+    }
+    
 }
 
 void cetakRute(Graph* graph) {
