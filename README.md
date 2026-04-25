@@ -1,13 +1,17 @@
-# Final-Project-Strudat-Klp4
-# Project Akhir MK Struktur Data
+# Smart Logistics & Expedition System (Final Project Kelompok 4)
 
+Aplikasi sistem logistik cerdas berbasis C++ yang mengintegrasikan struktur data kompleks untuk manajemen pengiriman barang, optimasi rute, dan pencarian inventaris.
 Program ini dikembangkan untuk memenuhi tugas proyek akhir mata kuliah Struktur Data. Sistem mengintegrasikan berbagai konsep manajemen data, pencarian, pengurutan, dan relasi antar objek.
 
 ## Fitur Utama & Implementasi
-- **Struktur Data:** Array (Statistik), Linked List (Antrean), Binary Search Tree (Data Master).
-- **Algoritma Sorting:** Insertion Sort & Merge Sort.
-- **Algoritma Searching:** Linear Search & Binary Search.
-- **Relasi Data:** Graph (Adjacency List) untuk pemetaan rute/relasi.
+| Konsep | Implementasi dalam Sistem |
+| :--- | :--- |
+| **Array** | Menyimpan data statis kategori layanan dan status pengiriman. |
+| **Linked List** | Mengelola antrean paket masuk (Queue) sebelum diproses. |
+| **Binary Search Tree** | Manajemen database resi untuk pencarian cepat. |
+| **Graph (Adj List)** | Pemetaan rute antar titik distribusi (Hub) di Sulawesi Selatan. |
+| **Sorting** | *Merge Sort* untuk laporan harian, *Insertion Sort* untuk prioritas paket kecil. |
+| **Searching** | *Binary Search* pada data tersortir dan *Linear Search* untuk filter manual. |
 
 ## Anggota Kelompok
 Dosen Pengampu: Kurnia Prima Putra, S.Kom., M.T
