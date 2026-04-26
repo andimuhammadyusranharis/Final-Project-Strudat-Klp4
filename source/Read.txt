@@ -1,1 +1,70 @@
+===========================================================
+PANDUAN PENGERJAAN PROYEK AKHIR - KELOMPOK 4
+SMART LOGISTICS & EXPEDITION SYSTEM
+===========================================================
 
+File ini berisi panduan teknis agar pengerjaan kode kita tetap 
+sinkron, rapi, dan mudah digabungkan (merge). Mohon dibaca 
+dengan teliti sebelum mulai coding.
+
+-----------------------------------------------------------
+1. PERSIAPAN AWAL
+-----------------------------------------------------------
+- Pastikan sudah install Git di laptop masing-masing.
+- Lakukan: git pull origin main (untuk mengambil struktur kode awal).
+- Pindah ke branch masing-masing:
+  * Nabil:  git checkout -b branch-nabil
+  * Ilham:  git checkout -b branch-ilham
+  * Rifyah: git checkout -b branch-rifyah
+  * Vera:   git checkout -b branch-vera
+
+-----------------------------------------------------------
+2. ATURAN MODULAR FILE
+-----------------------------------------------------------
+- JANGAN mengubah file 'global.h' tanpa diskusi di grup.
+- JANGAN mengubah file '.h' atau '.cpp' milik anggota lain.
+- Fokuslah HANYA pada file .cpp yang sudah ditugaskan kepada Anda:
+  * Nabil  -> bst_logic.cpp
+  * Ilham  -> sort_search.cpp
+  * Rifyah -> graph_route.cpp
+  * Vera   -> linked_list.cpp
+- Saya sendiri akan fokus pada alur main.cpp.
+
+-----------------------------------------------------------
+3. TATA CARA CODING
+-----------------------------------------------------------
+- Setiap fungsi yang sudah saya buatkan "template kosongnya", 
+  silakan diisi logikanya di dalam file .cpp masing-masing.
+- Pastikan input/output menggunakan format yang rapi agar 
+  user mudah mengerti saat program dijalankan.
+- Gunakan komentar (comment) pada bagian kode yang kompleks 
+  agar anggota lain paham logika yang Anda buat.
+
+-----------------------------------------------------------
+4. WORKFLOW GITHUB (UNTUK POIN PLUS)
+-----------------------------------------------------------
+- Jangan menunggu selesai semua baru di-push.
+- Lakukan commit setiap kali menyelesaikan satu fungsi.
+  Contoh:
+  git add .
+  git commit -m "Selesai mengerjakan fungsi Merge Sort"
+  git push origin branch-[nama-anda]
+
+- Jika sudah selesai semua bagian Anda, kabari di grup WA 
+  untuk kita lakukan "Pull Request" ke branch main secara bersama.
+
+-----------------------------------------------------------
+5. DEADLINE & KONSULTASI
+-----------------------------------------------------------
+- Deadline Proyek: Rabu, 13 Juni 2026
+- Target internal: Semua modul selesai H-3 sebelum deadline 
+  agar kita punya waktu untuk integrasi dan pembuatan slide.
+
+Jika ada error saat kompilasi atau bingung dengan parameter 
+fungsi, langsung tanyakan di grup!
+
+Selamat mengerjakan, bismillahkii!
+
+Salam,
+Andi Muh. Yusran Haris (Ketua)
+===========================================================
