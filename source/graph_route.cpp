@@ -14,6 +14,12 @@ Graph* createGraph(int V) {
 }
 
 void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
+    // cek 
+    if (graph->indeksKota.size() >= graph->jumlahKota) {
+    cout << "Jumlah kota melebihi kapasitas graph!" << endl;
+    return;
+    }
+
     if (graph->indeksKota.find(asal) == graph->indeksKota.end()) {
         int index = graph->indeksKota.size();
         graph->indeksKota[asal] = index;
@@ -22,20 +28,24 @@ void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
         int index = graph->indeksKota.size();
         graph->indeksKota[tujuan] = index;
     }//
+
     int src = graph->indeksKota[asal];
-    int dest = graph->indeksKota[tujuan];//
+    int dest = graph->indeksKota[tujuan];
+
     AdjNode* newNode = new AdjNode{tujuan, jarak, graph->head[src]};
     graph->head[src] = newNode;//
     AdjNode* newNode2 = new AdjNode{asal, jarak, graph->head[dest]};
     graph->head[dest] = newNode2;
+
 }
 
 void cetakRute(Graph* graph) {
-    //syap
+    cout << "=== PETA RUTE LOGISTIK ===" << endl;
+
     for (auto const& kota : graph->indeksKota) {
         string namaKota = kota.first;
         int index = kota.second; //
-        cout << namaKota << " -> "; //
+        cout << "[HUB] " << namaKota << " -> ";//
         AdjNode* temp = graph->head[index];
         while (temp != nullptr) {
             cout << "(" << temp->kotaTujuan << ", " << temp->jarak << " km) ";
