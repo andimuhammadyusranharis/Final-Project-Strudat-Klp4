@@ -1,19 +1,29 @@
 #include "sort_search.h"
-
-void insertionSortPaket(Paket arr[], int n) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
-}
-
-void mergeSortPaket(Paket arr[], int l, int r) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
-}
-
+// 1. Binary Search (untuk mencari berdasarkan Resi)
 int binarySearchPaket(Paket arr[], int n, string targetResi) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
+    int left = 0, right = n - 1;
+    
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        
+        if (arr[mid].resi == targetResi) {
+            return mid;
+        } else if (arr[mid].resi < targetResi) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
     return -1;
 }
 
+// 2. Linear Search (untuk mencari berdasarkan nama pengirim)
 int linearSearchPaket(Paket arr[], int n, string targetNama) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
+    for (int i = 0; i < n; i++) {
+        // Pastikan menggunakan .pengirim, sesuai dengan global.h
+        if (arr[i].pengirim == targetNama) {
+            return i;
+        }
+    }
     return -1;
 }
