@@ -21,7 +21,22 @@ NodeBST* insertBST(NodeBST* root, Paket data) {
     return root;
 }
 
-NodeBST* searchBST(NodeBST* root, string resi) {
-    
+NodeBST* searchBST(NodeBST* root, string resi){
+
+    // Tidak ketemu
+    if(root == nullptr)
+        return nullptr;
+
+    // Ketemu
+    if (resi == root->data.resi)
+        return root;
+
+    // Arahkan rekursi ke kiri atau kanan
+    if (resi < root->data.resi){
+        return searchBST(root->left, resi);
+    } else{ 
+        return searchBST(root->right, resi);
+    }
+
     return nullptr;
 }
