@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 127675da0816cf7017b3e8615281955b4ef6d029
 #include "global.h"
 #include "bst_logic.h"
 #include "linked_list.h"
@@ -31,3 +35,26 @@ int main() {
 
     return 0;
 }
+
+=======
+#include <iostream>
+using namespace std;
+//program menghitung luas dan keliling lingkaran
+//rumus luas = phi * r * r
+
+int main() {
+    float r, luas, keliling;
+    const float phi = 3.14;
+
+    cout << "Masukkan jari-jari lingkaran: ";
+    cin >> r;
+
+    luas = phi * r * r;
+    keliling = 2 * phi * r;
+
+    cout << "Luas lingkaran: " << luas << endl;
+    cout << "Keliling lingkaran: " << keliling << endl;
+
+    return 0;
+}
+>>>>>>> 2a5152e9abe9d8c5789067ac8fc2459aeb442247
