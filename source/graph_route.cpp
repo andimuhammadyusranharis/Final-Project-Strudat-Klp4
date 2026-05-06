@@ -2,8 +2,10 @@
 
 Graph* createGraph(int V) {
     Graph* graph = new Graph;
-    graph->jumlahKota = V;//
-    graph->head = new AdjNode*[V];//
+    graph->jumlahKota = V;
+
+    graph->head = new AdjNode*[V];
+
     for (int i=0; i<V; i++) {
         graph->head[i]=nullptr;
     }
@@ -11,33 +13,36 @@ Graph* createGraph(int V) {
 }
 
 void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
-    // cek 
+    // validasi kapasitas graph (agar tidak kelebihan)
     if (graph->indeksKota.size() >= graph->jumlahKota) {
     cout << "Jumlah kota melebihi kapasitas graph!" << endl;
     return;
     }
 
+    // jika kota asal belum ada, tambahkan ke map indeks
     if (graph->indeksKota.find(asal) == graph->indeksKota.end()) {
         int index = graph->indeksKota.size();
         graph->indeksKota[asal] = index;
-    }//
+    }
+    
+    // jika kota tujuan belum ada, tambahkan ke map indeks
     if (graph->indeksKota.find(tujuan) == graph->indeksKota.end()) {
         int index = graph->indeksKota.size();
         graph->indeksKota[tujuan] = index;
-    }//
+    }
 
     int src = graph->indeksKota[asal];
     int dest = graph->indeksKota[tujuan];
 
     AdjNode* newNode = new AdjNode{tujuan, jarak, graph->head[src]};
-    graph->head[src] = newNode;//
+    graph->head[src] = newNode;
+
     AdjNode* newNode2 = new AdjNode{asal, jarak, graph->head[dest]};
     graph->head[dest] = newNode2;
 
 }
 
 void cetakRute(Graph* graph) {
-
     //desc
     cout << "\n=== PETA RUTE LOGISTIK SULAWESI SELATAN ===\n";
     cout << "Menampilkan jalur distribusi antar kota/kabupaten\n\n";
@@ -76,8 +81,11 @@ void cetakRute(Graph* graph) {
 
         // format output
         while (temp != nullptr) {
-            cout << temp->kotaTujuan 
-                 << " (Jarak: " << temp->jarak << " km) ";
+            if (namaKota < temp->kotaTujuan) {
+                cout << temp->kotaTujuan 
+                    << " (Jarak: " << temp->jarak << " km) ";
+            }
+
             temp = temp->next;
         }
 
