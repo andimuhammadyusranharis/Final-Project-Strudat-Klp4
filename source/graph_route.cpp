@@ -37,19 +37,54 @@ void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
 }
 
 void cetakRute(Graph* graph) {
-    cout << "=== PETA RUTE LOGISTIK ===" << endl;
 
+    //desc
+    cout << "\n=== PETA RUTE LOGISTIK SULAWESI SELATAN ===\n";
+    cout << "Menampilkan jalur distribusi antar kota/kabupaten\n\n";
+
+    //total wil
+    cout << "Total Wilayah: " << graph->indeksKota.size() << endl;
+
+    //hitung total rute
+    int totalEdge = 0;
     for (auto const& kota : graph->indeksKota) {
-        string namaKota = kota.first;
-        int index = kota.second; //
-        cout << "[HUB] " << namaKota << " -> ";//
-        AdjNode* temp = graph->head[index];
+        AdjNode* temp = graph->head[kota.second];
         while (temp != nullptr) {
-            cout << "(" << temp->kotaTujuan << ", " << temp->jarak << " km) ";
+            totalEdge++;
             temp = temp->next;
         }
+    }
+    cout << "Total Rute: " << totalEdge / 2 << endl; // bagi 2 karena dua arah
+
+    cout << "----------------------------------------\n";
+
+    //loop utama
+    for (auto const& kota : graph->indeksKota) {
+        string namaKota = kota.first;
+        int index = kota.second;
+
+        // label hub utama
+        if (namaKota == "Kota Makassar") {
+            cout << "[HUB UTAMA] ";
+        } else {
+            cout << "[HUB] ";
+        }
+
+        cout << namaKota << " -> ";
+
+        AdjNode* temp = graph->head[index];
+
+        // format output
+        while (temp != nullptr) {
+            cout << temp->kotaTujuan 
+                 << " (Jarak: " << temp->jarak << " km) ";
+            temp = temp->next;
+        }
+
         cout << endl;
     }
+
+    cout << "========================================" << endl;
 }
 
 //LIST KOTA DAN KABUPATEN SULAWESI SELATAN (buat nanti ditaro di main.cpp bos)
