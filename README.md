@@ -29,8 +29,6 @@ Program ini dikembangkan untuk memenuhi tugas proyek akhir mata kuliah Struktur 
 - **Algoritma Sorting:** Insertion Sort & Merge Sort.
 - **Algoritma Searching:** Linear Search & Binary Search.
 - **Relasi Data:** Graph (Adjacency List) untuk pemetaan rute/relasi.
->>>>>>> 2a5152e9abe9d8c5789067ac8fc2459aeb442247
->>>>>>> 127675da0816cf7017b3e8615281955b4ef6d029
 
 ## Anggota Kelompok
 Dosen Pengampu: Kurnia Prima Putra, S.Kom., M.T
@@ -54,6 +52,4 @@ Universitas Negeri Makassar
 2. Compile file `main.cpp, bst_logic, graph_route, linked_list, sort_search` menggunakan compiler GCC/G++.
 =======
 2. Compile file `main.cpp` menggunakan compiler GCC/G++.
->>>>>>> 2a5152e9abe9d8c5789067ac8fc2459aeb442247
->>>>>>> 127675da0816cf7017b3e8615281955b4ef6d029
 3. Jalankan executable yang dihasilkan.
