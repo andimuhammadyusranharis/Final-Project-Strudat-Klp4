@@ -44,8 +44,8 @@ void tambahRute(Graph* graph, string asal, string tujuan, int jarak) {
 
 void cetakRute(Graph* graph) {
     //desc
-    cout << "\n=== PETA RUTE LOGISTIK SULAWESI SELATAN ===\n";
-    cout << "Menampilkan jalur distribusi antar kota/kabupaten\n\n";
+    cout << "=== PETA RUTE LOGISTIK SULAWESI SELATAN ===" << endl;
+    cout << "Menampilkan jalur distribusi antar kota/kabupaten" << endl << endl;
 
     //total wil
     cout << "Total Wilayah: " << graph->indeksKota.size() << endl;
@@ -61,7 +61,7 @@ void cetakRute(Graph* graph) {
     }
     cout << "Total Rute: " << totalEdge / 2 << endl; // bagi 2 karena dua arah
 
-    cout << "----------------------------------------\n";
+    cout << "========================================" << endl;
 
     //loop utama
     for (auto const& kota : graph->indeksKota) {
@@ -80,13 +80,16 @@ void cetakRute(Graph* graph) {
         AdjNode* temp = graph->head[index];
 
         // format output
-        while (temp != nullptr) {
-            if (namaKota < temp->kotaTujuan) {
-                cout << temp->kotaTujuan 
-                    << " (Jarak: " << temp->jarak << " km) ";
-            }
+        bool adaRute = false;
 
+        while (temp != nullptr) {
+            cout << "\n   -> " << temp->kotaTujuan << " (Jarak: " << temp->jarak << " km)";
+            adaRute = true;
             temp = temp->next;
+        }
+
+        if (!adaRute) {
+            cout << "(Tidak ada rute)";
         }
 
         cout << endl;
