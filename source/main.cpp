@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 127675da0816cf7017b3e8615281955b4ef6d029
 #include "global.h"
 #include "bst_logic.h"
 #include "linked_list.h"
