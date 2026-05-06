@@ -1,6 +1,7 @@
 #ifndef GRAPH_ROUTE_H
 #define GRAPH_ROUTE_H
 #include "global.h"
+#include <map> 
 
 struct AdjNode {
     string kotaTujuan;
@@ -11,6 +12,7 @@ struct AdjNode {
 struct Graph {
     int jumlahKota;
     AdjNode** head;
+    map<string, int> indeksKota;
 };
 
 // Inisialisasi graph
