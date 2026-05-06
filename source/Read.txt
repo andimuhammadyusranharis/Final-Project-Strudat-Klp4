@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ===========================================================
 PANDUAN PENGERJAAN PROYEK AKHIR - KELOMPOK 4
 SMART LOGISTICS & EXPEDITION SYSTEM
@@ -68,3 +69,6 @@ Selamat mengerjakan, bismillahkii!
 Salam,
 Andi Muh. Yusran Haris (Ketua)
 ===========================================================
+=======
+
+>>>>>>> 2a5152e9abe9d8c5789067ac8fc2459aeb442247
