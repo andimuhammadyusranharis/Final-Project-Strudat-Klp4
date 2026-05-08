@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 127675da0816cf7017b3e8615281955b4ef6d029
 # Smart Logistics & Expedition System (Final Project Kelompok 4)
 
 Aplikasi sistem logistik cerdas berbasis C++ yang mengintegrasikan struktur data kompleks untuk manajemen pengiriman barang, optimasi rute, dan pencarian inventaris.
@@ -16,9 +12,6 @@ Program ini dikembangkan untuk memenuhi tugas proyek akhir mata kuliah Struktur 
 | **Graph (Adj List)** | Pemetaan rute antar titik distribusi (Hub) di Sulawesi Selatan. |
 | **Sorting** | *Merge Sort* untuk laporan harian, *Insertion Sort* untuk prioritas paket kecil. |
 | **Searching** | *Binary Search* pada data tersortir dan *Linear Search* untuk filter manual. |
-<<<<<<< HEAD
-=======
-=======
 # Final-Project-Strudat-Klp4
 # Project Akhir MK Struktur Data
 
@@ -44,12 +37,6 @@ Fakultas Teknik
 Universitas Negeri Makassar
 
 ## Cara Menjalankan
-1. Clone repositori ini.
-<<<<<<< HEAD
-2. Compile file `main.cpp, bst_logic, graph_route, linked_list, sort_search` menggunakan compiler GCC/G++.
-=======
-<<<<<<< HEAD
-2. Compile file `main.cpp, bst_logic, graph_route, linked_list, sort_search` menggunakan compiler GCC/G++.
-=======
-2. Compile file `main.cpp` menggunakan compiler GCC/G++.
+1. Clone repositori ini. https://github.com/andimuhammadyusranharis/Final-Project-Strudat-Klp4.git
+2. Compile file `g++ main.cpp bst_logic.cpp graph_route.cpp linked_list.cpp sort_search.cpp -o program` menggunakan compiler GCC/G++.
 3. Jalankan executable yang dihasilkan.
