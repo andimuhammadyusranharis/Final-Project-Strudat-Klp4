@@ -1,8 +1,22 @@
 #include "linked_list.h"
 
+// Fungsi untuk memproses antrian di belakang
 void tambahPaket(NodeLL* &head, Paket data) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
-    // Implementasi penambahan node di belakang (Queue)
+    NodeLL* newNode = new NodeLL;
+    newNode->data = data;
+    newNode->next = nullptr;
+
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        NodeLL* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+
+    cout << "Paket berhasil ditambahkan ke antrean!\n";
 }
 
 void prosesPaket(NodeLL* &head) {
