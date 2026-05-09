@@ -19,10 +19,30 @@ void tambahPaket(NodeLL* &head, Paket data) {
 }
 
 void prosesPaket(NodeLL* &head) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
-    // Implementasi penghapusan node di depan
+    if (head == nullptr) {
+        cout << "Antrean kosong!\n";
+        return;
+    }
+
+    NodeLL* temp = head;
+    cout << "Memproses paket resi: " << temp->data.resi << endl;
+
+    head = head->next;
+    delete temp;
 }
 
 void tampilkanAntrean(NodeLL* head) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
+    if (head == nullptr) {
+        cout << "Antrean kosong!\n";
+        return;
+    }
+
+    NodeLL* temp = head;
+    while (temp != nullptr) {
+        cout << "Resi: " << temp->data.resi
+             << " | Pengirim: " << temp->data.pengirim
+             << " | Tujuan: " << temp->data.tujuan
+             << endl;
+        temp = temp->next;
+    }
 }
