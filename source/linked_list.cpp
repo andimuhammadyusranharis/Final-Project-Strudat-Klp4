@@ -1,15 +1,53 @@
 #include "linked_list.h"
 
+// Fungsi untuk memproses antrian di belakang (enqueue)
 void tambahPaket(NodeLL* &head, Paket data) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
-    // Implementasi penambahan node di belakang (Queue)
+    NodeLL* newNode = new NodeLL;
+    newNode->data = data;
+    newNode->next = nullptr;
+
+    if (head == nullptr) {
+        head = newNode;
+    } else {
+        NodeLL* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next = newNode;
+    }
+
+    cout << "Paket berhasil ditambahkan ke antrean!\n";
 }
 
+// Fungsi untuk memproses antrian di depan (dequeue)
 void prosesPaket(NodeLL* &head) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
-    // Implementasi penghapusan node di depan
+    if (head == nullptr) {
+        cout << "Antrean kosong!\n";
+        return;
+    }
+
+    NodeLL* temp = head;
+    cout << "Memproses paket resi: " << temp->data.resi << endl;
+
+    head = head->next;
+    delete temp;
 }
 
 void tampilkanAntrean(NodeLL* head) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
+    if (head == nullptr) {
+        cout << "Antrean kosong!\n";
+        return;
+    }
+
+    cout << "Antrean Paket:\n";
+    NodeLL* temp = head;
+    while (temp != nullptr) {
+        cout << "Resi: " << temp->data.resi 
+             << ", Pengirim: " << temp->data.pengirim 
+             << ", Tujuan: " << temp->data.tujuan 
+             << ", Berat: " << temp->data.berat 
+             << " kg, Prioritas: " << temp->data.prioritas 
+             << endl;
+        temp = temp->next;
+    }
 }
