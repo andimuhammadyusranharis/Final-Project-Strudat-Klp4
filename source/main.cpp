@@ -92,10 +92,10 @@ int main() {
                 break;
             }
             case 2:
-                // Panggil fungsi Nabil & Ilham
+                prosesPaket(antreanPaket);
                 break;
             case 3:
-                // Tampilkan antrean paket (fungsi Vera)
+                tampilkanAntrean(antreanPaket);
                 break;
             case 4: {
                 int opsiCari;
@@ -105,9 +105,22 @@ int main() {
 
                 if (opsiCari == 1) {
                     // Linear search by name
+                    string nama;
+                    cout << "Masukkan Nama Pengirim: "; cin >> nama;
 
+                    bool found = false;
+                    for (int i = 0; i < jumlahPaket; i++) {
+                        if (dataPaket[i].pengirim == nama) {
+                            cout << "Data ditemukan:\n";
+                            cout << "   Resi: " << dataPaket[i].resi << endl;
+                            cout << "   Tujuan: " << dataPaket[i].tujuan << endl;
+                            found = true;
+                        }
+                    }
 
-                    
+                    if (!found) {
+                        cout << "Data tidak ditemukan\n";
+                    }
                 } else if (opsiCari == 2) {
                     // BST & Binary search by resi
                     string cari;
