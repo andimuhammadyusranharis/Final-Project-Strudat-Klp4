@@ -37,7 +37,12 @@ void merge(Paket arr[], int l, int m, int r) {
 }
 
 void mergeSortPaket(Paket arr[], int l, int r) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
+    if (l < r) {
+        int m = (l + r) / 2;
+        mergeSortPaket(arr, l, m);
+        mergeSortPaket(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
 }
 
 int binarySearchPaket(Paket arr[], int n, string targetResi) {
