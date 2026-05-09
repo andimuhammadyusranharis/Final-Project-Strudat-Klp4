@@ -34,5 +34,20 @@ void prosesPaket(NodeLL* &head) {
 }
 
 void tampilkanAntrean(NodeLL* head) {
-    // KODE AKAN DIKERJAKAN OLEH VERA
+    if (head == nullptr) {
+        cout << "Antrean kosong!\n";
+        return;
+    }
+
+    cout << "Antrean Paket:\n";
+    NodeLL* temp = head;
+    while (temp != nullptr) {
+        cout << "Resi: " << temp->data.resi 
+             << ", Pengirim: " << temp->data.pengirim 
+             << ", Tujuan: " << temp->data.tujuan 
+             << ", Berat: " << temp->data.berat 
+             << " kg, Prioritas: " << temp->data.prioritas 
+             << endl;
+        temp = temp->next;
+    }
 }
