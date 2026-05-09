@@ -98,7 +98,19 @@ int main() {
                 // Tampilkan antrean paket (fungsi Vera)
                 break;
             case 4: {
-                string cari;
+                int opsiCari;
+                cout << "Cari berdasarkan Nama (Linear search)\n";
+                cout << "Cari berdasarkan Resi (BST & Binary search)\n"; 
+                cout << "Pilih: "; cin >> opsiCari;
+
+                if (opsiCari == 1) {
+                    // Linear search by name
+
+
+                    
+                } else if (opsiCari == 2) {
+                    // BST & Binary search by resi
+                    string cari;
                     cout << "Masukkan Resi: "; cin >> cari;
     
                     // BST Search
@@ -111,6 +123,9 @@ int main() {
                     } else {
                         cout << "[BST] Data tidak ditemukan\n";
                     }
+
+                    // Binary Search
+                }
                 break;
             }
             case 5:
