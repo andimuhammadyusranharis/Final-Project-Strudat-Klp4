@@ -63,6 +63,10 @@ int binarySearchPaket(Paket arr[], int n, string targetResi) {
 }
 
 int linearSearchPaket(Paket arr[], int n, string targetNama) {
-    // KODE AKAN DIKERJAKAN OLEH ILHAM
+    for (int i = 0; i < n; i++) {
+        if (arr[i].pengirim == targetNama) {
+            return i;
+        }
+    }
     return -1;
 }
