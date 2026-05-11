@@ -137,9 +137,17 @@ int main() {
                         cout << "[BST] Data tidak ditemukan\n";
                     }
 
-                    // Binary Search
+                    // Binary Search (array harus disortir dulu)
+                    mergeSortPaket(dataPaket, 0, jumlahPaket - 1);
+    
+                    int idx = binarySearchPaket(dataPaket, jumlahPaket, cari);
+                    if (idx != -1) {
+                        cout << "[Binary Search] Ditemukan di index " << idx << endl;
+                    } else {
+                        cout << "[Binary Search] Tidak ditemukan\n";
+                    }
+                    break;
                 }
-                break;
             }
             case 5:
                 cetakRute(graph);
