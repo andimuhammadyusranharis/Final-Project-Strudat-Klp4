@@ -137,16 +137,48 @@ int main() {
                         cout << "[BST] Data tidak ditemukan\n";
                     }
 
-                    // Binary Search
+                    // Binary Search (array harus disortir dulu)
+                    mergeSortPaket(dataPaket, 0, jumlahPaket - 1);
+    
+                    int idx = binarySearchPaket(dataPaket, jumlahPaket, cari);
+                    if (idx != -1) {
+                        cout << "[Binary Search] Ditemukan di index " << idx << endl;
+                    } else {
+                        cout << "[Binary Search] Tidak ditemukan\n";
+                    }
+                    break;
                 }
-                break;
             }
             case 5:
                 cetakRute(graph);
                 break;
-            case 6:
-                // Fungsi sorting & searching (Nabil & Ilham)
+                case 6:{
+                    if (jumlahPaket == 0) {
+                    cout << "Belum ada data paket!\n";
+                    break;
+                }
+
+                int opsi;
+                cout << "   1. Sort berdasarkan Prioritas (Insertion Sort)\n";
+                cout << "   2. Sort berdasarkan Berat (Merge Sort)\n";
+                cout << "   Pilih: "; cin >> opsi;
+
+                if (opsi == 1) {
+                    insertionSortPaket(dataPaket, jumlahPaket);
+                } else {
+                    mergeSortPaket(dataPaket, 0, jumlahPaket - 1);
+                }
+
+                cout << "\n=== DATA PAKET TERURUT ===\n";
+                for (int i = 0; i < jumlahPaket; i++) {
+                    cout << dataPaket[i].resi << " | "
+                         << dataPaket[i].pengirim << " | "
+                         << dataPaket[i].tujuan << " | "
+                         << dataPaket[i].berat << "kg | "
+                         << "Prioritas: " << dataPaket[i].prioritas << endl;
+                }
                 break;
+            }
         }
     } while (pilihan != 0);
 
